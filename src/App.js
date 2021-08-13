@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import firebase from "./firebase";
 
 function App() {
+  let firestore = firebase.firestore();
+  let userData = firestore.collection("thamizhTest");
+  function getData() {
+    let items = [];
+    userData.onSnapshot((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        console.log(doc.data().test);
+      });
+    });
+  }
+  getData();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>test</h1>
     </div>
   );
 }
