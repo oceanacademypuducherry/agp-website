@@ -1,5 +1,10 @@
 import "./App.css";
+import TopNavbar from "./components/navbar/Navbar";
 import firebase from "./firebase";
+import "bootstrap/dist/css/bootstrap.css";
+import Home from "./components/home/Home";
+import AboutUs from "./components/about/AboutUs";
+import Books from "./components/books/Books";
 
 function App() {
   let firestore = firebase.firestore();
@@ -15,7 +20,10 @@ function App() {
   getData();
   return (
     <div className="App">
-      <h1>test</h1>
+      <TopNavbar />
+      <Home />
+      <AboutUs />
+      <Books />
     </div>
   );
 }

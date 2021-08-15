@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Tenali+Ramakrishna&display=swap");
+
+.company-name {
+  color: rgb(51, 51, 51);
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Tenali Ramakrishna", sans-serif;
+}

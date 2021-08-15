@@ -1,0 +1,15 @@
+.section-title {
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.section-title::after {
+  content: "";
+  font-weight: bold;
+  height: 5px;
+  width: 100px;
+  background-color: black;
+}
