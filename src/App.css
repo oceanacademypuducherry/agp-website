@@ -39,3 +39,21 @@ html {
     transform: rotate(360deg);
   }
 }
+.see-all {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.see-all-text {
+  font-weight: bold;
+  color: rgb(0, 140, 255);
+  cursor: pointer;
+  margin: 10px 50px;
+  padding: 8px 15px;
+  background-color: rgba(216, 216, 216, 0.246);
+  border-radius: 5px;
+}
+.see-all-text:hover {
+  background-color: rgba(185, 185, 185, 0.322);
+  color: rgb(3, 124, 223);
+}

@@ -5,10 +5,16 @@ import { logo } from "../images/allImages";
 
 export default function TopNavbar() {
   return (
-    <Navbar variant="light" bg="light" expand="md" collapseOnSelect fixed="top">
+    <Navbar
+      variant="light"
+      bg="light"
+      expand="md"
+      collapseOnSelect
+      sticky="top"
+    >
       <Navbar.Brand>
         <NavLink href="#home" className="">
-          <img src={logo} width="60" />{" "}
+          <img src={logo} width="50" />{" "}
           <span className="company-name">Astro Guruji</span>
         </NavLink>
       </Navbar.Brand>

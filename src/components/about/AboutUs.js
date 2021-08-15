@@ -5,6 +5,7 @@ import "./aboutUs.css";
 export default function AboutUs() {
   return (
     <div id="about-us" className="about-us">
+      <br /> <br /> <br />
       <SectionTitle title="About Us" />
       <div className="about-us-all-content">
         <p className="about-us-content">

@@ -1,0 +1,43 @@
+.books-div {
+  padding-top: 80px;
+}
+.all-books {
+  display: flex;
+  overflow-x: scroll;
+}
+.all-books::-webkit-scrollbar {
+  /* display: none; */
+  /* scroll-behavior: smooth; */
+}
+.book-item {
+  padding: 50px;
+}
+
+/* Book */
+.book-container {
+  background-color: white;
+  display: inline-block;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  margin: 10px 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.book {
+  overflow: hidden;
+}
+.book-img {
+  transition: 0.35s;
+  transform: scale(1);
+}
+.book-img:hover {
+  transform: scale(1.1);
+}
+.book-title {
+  font-size: 22px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 500;
+  text-align: center;
+  margin: 10px 0;
+}

@@ -1,0 +1,55 @@
+.article-div {
+  padding-top: 80px;
+}
+.all-articles {
+  display: flex;
+  overflow: scroll;
+}
+
+/* article */
+
+.article-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 470px;
+  width: 300px;
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.527);
+  margin: 15px;
+  transition: 0.25s;
+}
+.article-container:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.527);
+}
+.article-img {
+  margin-bottom: 20px;
+  position: relative;
+  height: 200px;
+  width: auto;
+  overflow: hidden;
+}
+
+.article-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.article-title {
+  margin-left: 10px;
+  text-align: start;
+  display: inline;
+  color: rgb(58, 58, 58);
+  font-size: 22px;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, "Noto Sans";
+  font-weight: bold;
+}
+.article-subtitle {
+  padding: 0 10px;
+  text-align: justify;
+  font-family: Arial, "Noto Sans";
+
+  color: rgb(110, 110, 110);
+}

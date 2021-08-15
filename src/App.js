@@ -5,6 +5,9 @@ import "bootstrap/dist/css/bootstrap.css";
 import Home from "./components/home/Home";
 import AboutUs from "./components/about/AboutUs";
 import Books from "./components/books/Books";
+import Videos from "./components/videos/Videos";
+import Articles from "./components/article/Articles";
+import Querys from "./components/querys/Querys";
 
 function App() {
   let firestore = firebase.firestore();
@@ -24,6 +27,12 @@ function App() {
       <Home />
       <AboutUs />
       <Books />
+      <Videos />
+      <Articles />
+      <Querys />
+      <br />
+      <br />
+      <br />
     </div>
   );
 }

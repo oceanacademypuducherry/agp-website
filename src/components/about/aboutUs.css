@@ -19,3 +19,8 @@
   width: 95%;
   text-align: justify;
 }
+@media (max-width: 750px) {
+  .about-us-all-content {
+    width: 95%;
+  }
+}
