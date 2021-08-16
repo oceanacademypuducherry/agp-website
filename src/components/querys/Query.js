@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Query({ authorImg }) {
   return (
-    <div>
+    <div className="q-padding">
       <div className="query-container">
         <div className="question">what is your name ?</div>
         <div className="answer">

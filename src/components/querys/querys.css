@@ -6,6 +6,9 @@
   overflow: scroll;
   padding: 15px;
 }
+.q-padding {
+  padding: 20px;
+}
 
 /* query */
 .query-container {

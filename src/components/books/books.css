@@ -28,6 +28,12 @@
 .book-img {
   transition: 0.35s;
   transform: scale(1);
+  cursor: pointer;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 .book-img:hover {
   transform: scale(1.1);
