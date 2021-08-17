@@ -14,13 +14,15 @@
   background-color: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
   margin: 10px;
+  width: 400px;
 }
 .thumbnail {
+  height: 300px;
+  width: 400px;
   overflow: hidden;
 }
 .thumbnail img {
-  height: auto;
-  width: 400px;
+  height: 100%;
   object-fit: contain;
   transition: 0.35s;
   cursor: pointer;

@@ -21,11 +21,16 @@
   margin: 10px 10px;
   border-radius: 10px;
   overflow: hidden;
+  width: 300px;
 }
 .book {
+  height: 400px;
+  width: 300px;
   overflow: hidden;
 }
 .book-img {
+  width: 100%;
+  height: auto;
   transition: 0.35s;
   transform: scale(1);
   cursor: pointer;
