@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Main from "./components/main/Main";
 import BookPreview from "./components/books/BookPreview";
 import VideoPlayer from "./components/videos/VideoPlayer";
+import ArticleView from "./components/article/ArticleView";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route exact path="/" component={Main} />
             <Route exact path="/book-preview/:id" component={BookPreview} />
             <Route exact path="/video-player/:id" component={VideoPlayer} />
+            <Route exact path="/article-view/:id" component={ArticleView} />
           </Switch>
         </div>
       </Provider>

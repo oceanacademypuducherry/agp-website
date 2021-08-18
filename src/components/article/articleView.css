@@ -1,0 +1,23 @@
+.av-article-img-div {
+  width: 100vw;
+  height: 400px;
+  background-color: rgb(243, 243, 243);
+  overflow: hidden;
+  align-items: center;
+  display: flex;
+  padding: 20px;
+}
+.av-article-img-div img {
+  object-fit: cover;
+  width: auto;
+  margin-right: 20px;
+}
+.av-article-title {
+  font-size: 35px;
+  text-align: justify;
+}
+.av-article-content {
+  padding: 30px 20px;
+  font-size: 20px;
+  text-align: justify;
+}
