@@ -42,8 +42,12 @@ export default function Videos() {
         ) : error ? (
           <h1>video Error</h1>
         ) : (
-          videos.map((video) => (
-            <Video videoThumbnail={video.imageLink} title={video.title} />
+          videos.map((video, index) => (
+            <Video
+              videoThumbnail={video.imageLink}
+              title={video.title}
+              id={index}
+            />
           ))
         )}
       </Carousel>

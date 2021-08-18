@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Main from "./components/main/Main";
 import BookPreview from "./components/books/BookPreview";
+import VideoPlayer from "./components/videos/VideoPlayer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Main} />
             <Route exact path="/book-preview/:id" component={BookPreview} />
+            <Route exact path="/video-player/:id" component={VideoPlayer} />
           </Switch>
         </div>
       </Provider>

@@ -1,0 +1,41 @@
+.video-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vp-video-div {
+  height: 80vh;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.vp-video {
+  margin-top: -200px;
+  background-color: red;
+  height: 400px;
+  width: 720px;
+}
+.vp-video-title {
+  font-size: 25px;
+}
+.vp-video-description {
+  font-size: 18px;
+  text-align: justify;
+}
+/* video list */
+.vp-video-list {
+  height: auto;
+  margin: 20px;
+}
+
+.vp-vl-video {
+  height: 200px;
+  width: 350px;
+  overflow: hidden;
+}
+.vp-vl-video img {
+  width: 100%;
+}
