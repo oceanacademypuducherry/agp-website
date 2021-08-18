@@ -14,7 +14,7 @@ export default function VideoPlayer() {
   return (
     <div className="video-player">
       <Row>
-        <Col md={8}>
+        <Col lg={8}>
           <div className="vp-video-div">
             <div className="vp-video">
               <ReactPlayer
@@ -30,17 +30,24 @@ export default function VideoPlayer() {
             </div>
           </div>
         </Col>
-        <Col md={4}>
+        <Col lg={4}>
           {allVideos.videos.map((video, index) => (
             <div className="vp-video-list">
-              <div className="vp-vl-video">
-                <img
-                  src={video.imageLink}
-                  alt="test"
-                  className="vp-vl-video-img"
-                />
-              </div>
-              <div className="vp-vl-video-title">{video.title}</div>
+              <Row>
+                <Col>
+                  {" "}
+                  <div className="vp-vl-video">
+                    <img
+                      src={video.imageLink}
+                      alt="test"
+                      className="vp-vl-video-img"
+                    />
+                  </div>
+                </Col>
+                <Col>
+                  <div className="vp-vl-video-title">{video.title}</div>
+                </Col>
+              </Row>
             </div>
           ))}
         </Col>
