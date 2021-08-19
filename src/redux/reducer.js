@@ -8,6 +8,7 @@ import {
   GET_ARTICLE_DATA_REQUEST,
   GET_ARTICLE_DATA_SUCCESS,
   GET_ARTICLE_DATA_FAILURE,
+  GET_ARTICLE_ID,
 } from "./actionType";
 
 //image reducer
@@ -53,6 +54,16 @@ export const articleReducer = (state = { articles: [] }, action) => {
       return { loading: false, articles: action.payload };
     case GET_ARTICLE_DATA_FAILURE:
       return { loading: false, error: action.payload };
+
+    default:
+      return state;
+  }
+};
+
+export const articleIdReducer = (state = { articleID: [] }, action) => {
+  switch (action.type) {
+    case GET_ARTICLE_ID:
+      return { articleId: action.payload };
     default:
       return state;
   }

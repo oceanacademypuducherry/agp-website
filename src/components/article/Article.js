@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function Article({ articleImg }) {
+export default function Article({ articleImg, id }) {
   return (
-    <div>
+    <Link to={`/article-view/YdQTNcEjjg4rn97T9iCd`}>
       <div className="article-container">
         <div className="article-img">
           <img src={articleImg} alt="" />
@@ -16,6 +17,6 @@ export default function Article({ articleImg }) {
         </div>
         <div className="btn btn-fluid btn-success mt-3">Read more</div>
       </div>
-    </div>
+    </Link>
   );
 }

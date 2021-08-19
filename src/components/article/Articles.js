@@ -10,6 +10,7 @@ import { articleDataRequest } from "../../redux/action";
 export default function Articles() {
   const dispatch = useDispatch();
   const allArticles = useSelector((state) => state.allArticles);
+  const articleID = useSelector((state) => state.articleId);
   const { loading, articles, error } = allArticles;
   useEffect(() => {
     dispatch(articleDataRequest());
@@ -25,6 +26,7 @@ export default function Articles() {
   return (
     <div id="article" className="article-div">
       <SectionTitle title="Articles" />
+      <div className="div">{`${articleID}`}</div>
       <div className="see-all">
         <div className="see-all-text ">See All</div>
       </div>
@@ -40,8 +42,8 @@ export default function Articles() {
         ) : error ? (
           <h1>article Error</h1>
         ) : (
-          articles.map((article) => (
-            <Article articleImg={article.articleImage} />
+          articles.map((article, index) => (
+            <Article articleImg={article.articleImage} id={index} />
           ))
         )}
         <Article articleImg={article} />

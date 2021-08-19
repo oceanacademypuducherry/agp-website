@@ -8,6 +8,7 @@ import {
   GET_ARTICLE_DATA_REQUEST,
   GET_ARTICLE_DATA_SUCCESS,
   GET_ARTICLE_DATA_FAILURE,
+  GET_ARTICLE_ID,
 } from "./actionType";
 import firebase from "../firebase";
 const firestore = firebase.firestore();
@@ -64,14 +65,18 @@ export const articleDataRequest = () => async (dispatch) => {
     dispatch({ type: GET_ARTICLE_DATA_REQUEST });
 
     let articleItem = [];
+    let articleId = [];
     firestore
       .collection("articles")
       .get()
       .then((snapshot) => {
         snapshot.docs.forEach((doc) => {
           articleItem.push(doc.data());
+          articleId.push(doc.id);
         });
         console.log(articleItem);
+        console.log(articleId);
+        dispatch({ type: GET_ARTICLE_ID, payload: articleId });
         dispatch({ type: GET_ARTICLE_DATA_SUCCESS, payload: articleItem });
       });
   } catch (error) {
