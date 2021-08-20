@@ -1,21 +1,37 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Book from "./Book";
 import "./books.css";
 import SectionTitle from "../common/SectionTitle";
 import Carousel from "react-elastic-carousel";
 import { useSelector, useDispatch } from "react-redux";
 import { bookDataRequest } from "../../redux/action";
-import { book } from "../images/allImages";
+import { bookImg } from "../images/allImages";
+import firebase from "../../firebase";
 
 export default function Books() {
-  const dispatch = useDispatch();
-  const allBooks = useSelector((state) => state.allBooks);
+  // const dispatch = useDispatch();
+  // const allBooks = useSelector((state) => state.allBooks);
+  // const { loading, error, books } = allBooks;
+  const [books, setBooks] = useState([]);
+  const firestore = firebase.firestore();
+  const bookFromDb = firestore.collection("books").get();
 
-  const { loading, error, books } = allBooks;
+  function getBookData() {
+    let bk = [];
+    bookFromDb.then((response) => {
+      response.docs.forEach((book) => {
+        let dbField = book.data();
+        dbField["docId"] = book.id;
+        bk.push(dbField);
+      });
+      setBooks(bk);
+    });
+  }
 
   useEffect(() => {
-    dispatch(bookDataRequest());
-  }, [dispatch]);
+    // dispatch(bookDataRequest());
+    getBookData();
+  }, []);
 
   const breakPoints = [
     { width: 550, itemsToShow: 1 },
@@ -24,7 +40,7 @@ export default function Books() {
     { width: 1500, itemsToShow: 5 },
     { width: 1800, itemsToShow: 6 },
   ];
-
+  console.log(books);
   return (
     <div id="books" className="books-div">
       <SectionTitle title="Free Books" />
@@ -38,20 +54,18 @@ export default function Books() {
         enableAutoPlay={false}
         showArrows={false}
       >
-        {loading ? (
-          <h1>Book loading</h1>
-        ) : error ? (
-          <h1>Book error</h1>
-        ) : (
-          books.map((book, index) => (
-            <Book img={book.bookLink} title={book.bookName} id={index} />
-          ))
-        )}
-
-        <Book img={book} title={"book.bookName"} />
-        <Book img={book} title={"book.bookName"} />
-        <Book img={book} title={"book.bookName"} />
-        <Book img={book} title={"book.bookName"} />
+        {books.map((book, key) => (
+          <Book
+            key={key}
+            img={book.bookLink}
+            title={book.bookName}
+            docId={book.docId}
+          />
+        ))}
+        {/* <Book img={bookImg} title={"book.bookName"} />
+        <Book img={bookImg} title={"book.bookName"} />
+        <Book img={bookImg} title={"book.bookName"} />
+        <Book img={bookImg} title={"book.bookName"} /> */}
       </Carousel>
       {/* </div> */}
     </div>

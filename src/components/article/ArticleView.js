@@ -23,7 +23,7 @@ export default function ArticleView() {
   });
   function getArticleData() {
     const firestore = firebase.firestore();
-    const articleDatas = firestore
+    firestore
       .collection("articles")
       .doc(id)
       .get()

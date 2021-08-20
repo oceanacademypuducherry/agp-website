@@ -1,20 +1,41 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SectionTitle from "../common/SectionTitle";
 import Video from "./Video";
 import "./videos.css";
 import { video } from "../images/allImages";
 import Carousel from "react-elastic-carousel";
+import firebase from "../../firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { videoDataRequest } from "../../redux/action";
 
 export default function Videos() {
-  const dispatch = useDispatch();
-  const allVideos = useSelector((state) => state.allVideos);
-  const { loading, videos, error } = allVideos;
+  // const dispatch = useDispatch();
+  // const allVideos = useSelector((state) => state.allVideos);
+  // const { loading, videos, error } = allVideos;
+  const [videos, setVideos] = useState([]);
+  const firestore = firebase.firestore();
+  function getVideoData() {
+    let vd = [];
+    firestore
+      .collection("youtubeVedios")
+      .get()
+      .then((videoData) => {
+        videoData.docs.forEach((video) => {
+          let dbField = video.data();
+          dbField["docId"] = video.id;
+          vd.push(dbField);
+        });
+        setVideos(vd);
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  }
 
   useEffect(() => {
-    dispatch(videoDataRequest());
-  }, [dispatch]);
+    getVideoData();
+    // dispatch(videoDataRequest());
+  }, []);
 
   const breakPoints = [
     { width: 650, itemsToShow: 1 },
@@ -31,25 +52,21 @@ export default function Videos() {
         <div className="see-all-text ">See All</div>
       </div>
       {/* <div className="all-videos"> */}
+
       <Carousel
         breakPoints={breakPoints}
         enableSwipe={true}
         enableAutoPlay={false}
         showArrows={false}
       >
-        {loading ? (
-          <h1>video Loading</h1>
-        ) : error ? (
-          <h1>video Error</h1>
-        ) : (
-          videos.map((video, index) => (
-            <Video
-              videoThumbnail={video.imageLink}
-              title={video.title}
-              id={index}
-            />
-          ))
-        )}
+        {videos.map((video, key) => (
+          <Video
+            key={key}
+            videoThumbnail={video.imageLink}
+            title={video.title}
+            id={video.docId}
+          />
+        ))}
       </Carousel>
       {/* </div> */}
     </div>

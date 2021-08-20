@@ -1,20 +1,35 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SectionTitle from "../common/SectionTitle";
 import Article from "./Article";
 import "./article.css";
-import { article } from "../images/allImages";
+import { articleimg } from "../images/allImages";
 import Carousel from "react-elastic-carousel";
 import { useDispatch, useSelector } from "react-redux";
 import { articleDataRequest } from "../../redux/action";
+import firebase from "../../firebase";
 
 export default function Articles() {
-  const dispatch = useDispatch();
-  const allArticles = useSelector((state) => state.allArticles);
-  const articleID = useSelector((state) => state.articleId);
-  const { loading, articles, error } = allArticles;
+  const [article, setArticle] = useState([]);
+  const firestore = firebase.firestore();
+  const articleData = firestore.collection("articles").get();
+  function getAricleData() {
+    let al = [];
+    articleData.then((response) => {
+      let doc = response.docs;
+      doc.map((item, key) => {
+        let dbFields = item.data();
+        dbFields["docId"] = item.id;
+        dbFields["key"] = key;
+        al.push(dbFields);
+      });
+      setArticle(al);
+    });
+  }
+
   useEffect(() => {
-    dispatch(articleDataRequest());
-  }, [dispatch]);
+    getAricleData();
+  }, []);
+
   const breakPoints = [
     { width: 550, itemsToShow: 1 },
     { width: 900, itemsToShow: 3 },
@@ -26,32 +41,33 @@ export default function Articles() {
   return (
     <div id="article" className="article-div">
       <SectionTitle title="Articles" />
-      <div className="div">{`${articleID}`}</div>
+
       <div className="see-all">
         <div className="see-all-text ">See All</div>
       </div>
-      {/* <div className="all-articles"> */}
+
       <Carousel
         breakPoints={breakPoints}
         enableSwipe={true}
         enableAutoPlay={false}
         showArrows={false}
       >
-        {loading ? (
-          <h1>article Loading</h1>
-        ) : error ? (
-          <h1>article Error</h1>
-        ) : (
-          articles.map((article, index) => (
-            <Article articleImg={article.articleImage} id={index} />
-          ))
-        )}
-        <Article articleImg={article} />
-        <Article articleImg={article} />
-        <Article articleImg={article} />
-        <Article articleImg={article} />
-        <Article articleImg={article} />
-        <Article articleImg={article} />
+        {article.map((item, key) => (
+          <Article
+            key={key}
+            articleImg={item.articleImage}
+            title={item.articleName}
+            description={item.content}
+            docId={item.docId}
+          />
+        ))}
+
+        <Article articleImg={articleimg} />
+        <Article articleImg={articleimg} />
+        <Article articleImg={articleimg} />
+        <Article articleImg={articleimg} />
+        <Article articleImg={articleimg} />
+        <Article articleImg={articleimg} />
       </Carousel>
       {/* </div> */}
     </div>

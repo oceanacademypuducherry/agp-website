@@ -1,15 +1,44 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { book } from "../images/allImages";
 import "./book_preview.css";
 import { Row, Col } from "react-bootstrap";
 import { FaHeart, FaShare } from "react-icons/fa";
+import firebase from "../../firebase";
 export default function BookPreview() {
-  const selectedBook = useSelector((state) => state.allBooks);
+  // const selectedBook = useSelector((state) => state.allBooks);
   let { id } = useParams();
+  const [bookData, setBookData] = useState({
+    bookTitle: "book name",
+    bookImg: "",
+    description: "",
+    pdfLink: "",
+  });
+
+  function getBookData() {
+    const firestore = firebase.firestore();
+    firestore
+      .collection("books")
+      .doc(id)
+      .get()
+      .then((data) => {
+        setBookData({
+          ...bookData,
+          bookTitle: data.data().bookName,
+          bookImg: data.data().bookLink,
+          description: data.data().description,
+          pdfLink: data.data().link,
+        });
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  }
+
   useEffect(() => {
     // console.log(selectedBook.books[0].bookName);
+    getBookData();
   }, []);
   return (
     <div className="book-preview">
@@ -17,15 +46,15 @@ export default function BookPreview() {
         <Row>
           <Col lg={5} className="bp-col bp-i">
             <div className="book-image">
-              <img src={`${selectedBook.books[id].bookLink}`} className="img" />
+              <img src={`${bookData.bookImg}`} className="img" />
             </div>
           </Col>
 
           <Col lg={7} className="bp-col bp-c">
             <div className="book-preview-content-col">
-              <div className="bp-title">{`${selectedBook.books[id].bookName}`}</div>
+              <div className="bp-title">{`${bookData.bookTitle}`}</div>
               <div className="bp-content">
-                {`${selectedBook.books[id].description.slice(0, 500)}... `}
+                {`${bookData.description.slice(0, 500)}... `}
                 <span className="bp-read-more">Read more</span>
               </div>
               <div className="bp-icons">
