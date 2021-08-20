@@ -56,43 +56,38 @@ export default function VideoPlayer() {
   useEffect(() => {
     getVideoData();
     // dispatch(videoDataRequest());
-  }, []);
+  }, [id]);
 
   return (
     <div className="video-player">
-      <Container fluid>
-        <Row lg={12}>
-          <Col lg={8}>
-            <div className="video-content">
-              <div className="vp-video-div">
-                <div className="vp-video">
-                  <ReactPlayer
-                    className="react-player"
-                    url={selectedVideo.videoLink}
-                    controls={true}
-                    width={"100%"}
-                    height={"100%"}
-                  />
-                </div>
-                <div className="vp-video-title">{selectedVideo.title}</div>
-                <div className="vp-video-description">
-                  {selectedVideo.description}
-                </div>
-              </div>
-            </div>
-          </Col>
-          <Col lg={4}>
-            {videos.map((video, key) => (
-              <RecomendedVideo
-                key={key}
-                title={video.title}
-                imageLink={video.imageLink}
-                id={video.docId}
-              />
-            ))}
-          </Col>
-        </Row>
-      </Container>
+      <div className="video-content">
+        <div className="vp-video-div">
+          <div className="vp-video">
+            <ReactPlayer
+              className="react-player"
+              url={selectedVideo.videoLink}
+              controls={true}
+              width={"100%"}
+              height={"100%"}
+            />
+          </div>
+          <div className="vp-video-title">{selectedVideo.title}</div>
+          <div className="vp-video-description">
+            {selectedVideo.description}
+          </div>
+        </div>
+      </div>
+
+      <div className="rc-video">
+        {videos.map((video, key) => (
+          <RecomendedVideo
+            key={key}
+            title={video.title}
+            imageLink={video.imageLink}
+            id={video.docId}
+          />
+        ))}
+      </div>
     </div>
   );
 }

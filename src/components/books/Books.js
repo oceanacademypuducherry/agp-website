@@ -14,7 +14,10 @@ export default function Books() {
   // const { loading, error, books } = allBooks;
   const [books, setBooks] = useState([]);
   const firestore = firebase.firestore();
-  const bookFromDb = firestore.collection("books").get();
+  const bookFromDb = firestore
+    .collection("books")
+    .where("type", "==", "free")
+    .get();
 
   function getBookData() {
     let bk = [];
