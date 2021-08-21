@@ -21,12 +21,12 @@ export default function TopNavbar() {
       <Navbar.Toggle />
       <Navbar.Collapse>
         <Nav className="ml-auto h5 text-left ">
-          <Nav.Link href="/#home">Home</Nav.Link>
-          <Nav.Link href="/#about-us">About Us</Nav.Link>
+          <Nav.Link href="/agp-website/#home">Home</Nav.Link>
+          <Nav.Link href="/agp-website/#about-us">About Us</Nav.Link>
           <Nav.Link href="/agp-website/#books">Books</Nav.Link>
-          <Nav.Link href="/#videos">Videos</Nav.Link>
-          <Nav.Link href="/#article">Article</Nav.Link>
-          <Nav.Link href="/#query">Query</Nav.Link>
+          <Nav.Link href="/agp-website/#videos">Videos</Nav.Link>
+          <Nav.Link href="/agp-website/#article">Article</Nav.Link>
+          <Nav.Link href="/agp-website/#query">Query</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
