@@ -22,32 +22,32 @@ function App() {
         <Switch>
           <Route exact path={process.env.PUBLIC_URL + "/"} component={Main} />
           <Route
-            path={process.env.PUBLIC_URL + "/book-preview/:id"}
+            path={"/agp-website/book-preview/:id"}
             component={BookPreview}
           />
           <Route
             exact
-            path={process.env.PUBLIC_URL + "/video-player/:id"}
+            path={"/agp-website/video-player/:id"}
             component={VideoPlayer}
           />
           <Route
             exact
-            path={process.env.PUBLIC_URL + "/article-view/:id"}
+            path={"/agp-website/article-view/:id"}
             component={ArticleView}
           />
           <Route
             exact
-            path={process.env.PUBLIC_URL + "/article/seeAll"}
+            path={"/agp-website/article/seeAll"}
             component={SeeAllArticle}
           />
           <Route
             exact
-            path={process.env.PUBLIC_URL + "/books/seeAll"}
+            path={"/agp-website/books/seeAll"}
             component={SeeAllBooks}
           />
           <Route
             exact
-            path={process.env.PUBLIC_URL + "/videos/seeAll"}
+            path={"/agp-website/videos/seeAll"}
             component={SeeAllVideo}
           />
         </Switch>

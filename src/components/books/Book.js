@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Book({ img, title, docId }) {
   return (
-    <Link to={`/book-preview/${docId}`} className="book-link">
+    <Link to={`/agp-website/book-preview/${docId}`} className="book-link">
       <div className="book-container">
         <div className="book">
           <img src={img} />

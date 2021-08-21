@@ -49,7 +49,7 @@ export default function Books() {
       <SectionTitle title="Free Books" />
 
       <div className="see-all">
-        <Link to={`/books/seeAll`} className="see-all-text ">
+        <Link to={`/agp-website/books/seeAll`} className="see-all-text ">
           See All
         </Link>
       </div>

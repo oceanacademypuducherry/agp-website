@@ -44,7 +44,7 @@ export default function Articles() {
       <SectionTitle title="Articles" />
 
       <div className="see-all">
-        <Link to={`/article/seeAll`} className="see-all-text ">
+        <Link to={`/agp-website/article/seeAll`} className="see-all-text ">
           See All
         </Link>
       </div>

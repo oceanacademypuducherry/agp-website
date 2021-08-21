@@ -49,7 +49,7 @@ export default function Videos() {
     <div id="videos" className="videos-div">
       <SectionTitle title="Free Videos" />
       <div className="see-all">
-        <Link to={`/videos/seeAll`} className="see-all-text ">
+        <Link to={`/agp-website/videos/seeAll`} className="see-all-text ">
           See All
         </Link>
       </div>

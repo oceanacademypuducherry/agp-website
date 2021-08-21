@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Video({ videoThumbnail, title, id }) {
   return (
-    <Link to={`/video-player/${id}`} className="video-link">
+    <Link to={`/agp-website/video-player/${id}`} className="video-link">
       <div className="video-container">
         <div className="thumbnail">
           <img src={videoThumbnail} alt="" />

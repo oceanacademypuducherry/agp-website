@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Article({ articleImg, docId, title, description }) {
   return (
     <div className="all-articles">
-      <Link to={`/article-view/${docId}`} className="to-link">
+      <Link to={`/agp-website/article-view/${docId}`} className="to-link">
         <div className="article-container">
           <div className="article-img">
             <img src={articleImg} alt="" />
