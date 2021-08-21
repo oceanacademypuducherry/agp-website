@@ -16,13 +16,13 @@ import SeeAllVideo from "./components/videos/SeeAllVideo";
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Provider store={store}>
         <div className="App">
           <TopNavbar />
           <Switch>
-            <Route path={"/"} component={Main} />
-            <Route path={"/book-preview/:id"} component={BookPreview} />
+            <Route exact path={"/"} component={Main} />
+            <Route exact path={"/book-preview/:id"} component={BookPreview} />
             <Route exact path="/video-player/:id" component={VideoPlayer} />
             <Route exact path="/article-view/:id" component={ArticleView} />
             <Route exact path="/article/seeAll" component={SeeAllArticle} />
