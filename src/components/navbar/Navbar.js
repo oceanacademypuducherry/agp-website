@@ -13,7 +13,7 @@ export default function TopNavbar() {
       sticky="top"
     >
       <Navbar.Brand>
-        <NavLink href="/#home" className="">
+        <NavLink href="/agp-website/#home" className="">
           <img src={logo} width="50" />{" "}
           <span className="company-name">Astro Guruji</span>
         </NavLink>
@@ -23,7 +23,7 @@ export default function TopNavbar() {
         <Nav className="ml-auto h5 text-left ">
           <Nav.Link href="/#home">Home</Nav.Link>
           <Nav.Link href="/#about-us">About Us</Nav.Link>
-          <Nav.Link href="/#books">Books</Nav.Link>
+          <Nav.Link href="/agp-website/#books">Books</Nav.Link>
           <Nav.Link href="/#videos">Videos</Nav.Link>
           <Nav.Link href="/#article">Article</Nav.Link>
           <Nav.Link href="/#query">Query</Nav.Link>
