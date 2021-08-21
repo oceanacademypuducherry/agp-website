@@ -64,13 +64,6 @@ export default function Articles() {
             docId={item.docId}
           />
         ))}
-
-        <Article articleImg={articleimg} />
-        <Article articleImg={articleimg} />
-        <Article articleImg={articleimg} />
-        <Article articleImg={articleimg} />
-        <Article articleImg={articleimg} />
-        <Article articleImg={articleimg} />
       </Carousel>
       {/* </div> */}
     </div>
