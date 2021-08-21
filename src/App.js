@@ -10,6 +10,9 @@ import Main from "./components/main/Main";
 import BookPreview from "./components/books/BookPreview";
 import VideoPlayer from "./components/videos/VideoPlayer";
 import ArticleView from "./components/article/ArticleView";
+import SeeAllArticle from "./components/article/SeeAllArticle";
+import SeeAllBooks from "./components/books/SeeAllBooks";
+import SeeAllVideo from "./components/videos/SeeAllVideo";
 
 function App() {
   return (
@@ -22,6 +25,9 @@ function App() {
             <Route exact path="/book-preview/:id" component={BookPreview} />
             <Route exact path="/video-player/:id" component={VideoPlayer} />
             <Route exact path="/article-view/:id" component={ArticleView} />
+            <Route exact path="/article/seeAll" component={SeeAllArticle} />
+            <Route exact path="/books/seeAll" component={SeeAllBooks} />
+            <Route exact path="/videos/seeAll" component={SeeAllVideo} />
           </Switch>
         </div>
       </Provider>

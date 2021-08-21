@@ -7,6 +7,7 @@ import Carousel from "react-elastic-carousel";
 import firebase from "../../firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { videoDataRequest } from "../../redux/action";
+import { Link } from "react-router-dom";
 
 export default function Videos() {
   // const dispatch = useDispatch();
@@ -34,7 +35,6 @@ export default function Videos() {
 
   useEffect(() => {
     getVideoData();
-    // dispatch(videoDataRequest());
   }, []);
 
   const breakPoints = [
@@ -49,7 +49,9 @@ export default function Videos() {
     <div id="videos" className="videos-div">
       <SectionTitle title="Free Videos" />
       <div className="see-all">
-        <div className="see-all-text ">See All</div>
+        <Link to={`/videos/seeAll`} className="see-all-text ">
+          See All
+        </Link>
       </div>
       {/* <div className="all-videos"> */}
 

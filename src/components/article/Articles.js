@@ -7,6 +7,7 @@ import Carousel from "react-elastic-carousel";
 import { useDispatch, useSelector } from "react-redux";
 import { articleDataRequest } from "../../redux/action";
 import firebase from "../../firebase";
+import { Link } from "react-router-dom";
 
 export default function Articles() {
   const [article, setArticle] = useState([]);
@@ -32,10 +33,10 @@ export default function Articles() {
 
   const breakPoints = [
     { width: 550, itemsToShow: 1 },
-    { width: 900, itemsToShow: 3 },
-    { width: 1300, itemsToShow: 4 },
-    { width: 1500, itemsToShow: 5 },
-    { width: 1800, itemsToShow: 6 },
+    { width: 900, itemsToShow: 2 },
+    { width: 1300, itemsToShow: 3 },
+    { width: 1500, itemsToShow: 4 },
+    { width: 1800, itemsToShow: 5 },
   ];
 
   return (
@@ -43,7 +44,9 @@ export default function Articles() {
       <SectionTitle title="Articles" />
 
       <div className="see-all">
-        <div className="see-all-text ">See All</div>
+        <Link to={`/article/seeAll`} className="see-all-text ">
+          See All
+        </Link>
       </div>
 
       <Carousel

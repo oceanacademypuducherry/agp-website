@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { bookDataRequest } from "../../redux/action";
 import { bookImg } from "../images/allImages";
 import firebase from "../../firebase";
+import { Link } from "react-router-dom";
 
 export default function Books() {
   // const dispatch = useDispatch();
@@ -32,7 +33,6 @@ export default function Books() {
   }
 
   useEffect(() => {
-    // dispatch(bookDataRequest());
     getBookData();
   }, []);
 
@@ -49,7 +49,9 @@ export default function Books() {
       <SectionTitle title="Free Books" />
 
       <div className="see-all">
-        <div className="see-all-text ">See All</div>
+        <Link to={`/books/seeAll`} className="see-all-text ">
+          See All
+        </Link>
       </div>
       <Carousel
         breakPoints={breakPoints}

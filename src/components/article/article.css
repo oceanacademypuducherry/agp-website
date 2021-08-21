@@ -2,8 +2,7 @@
   padding-top: 80px;
 }
 .all-articles {
-  display: flex;
-  overflow: scroll;
+  padding: 20px;
 }
 
 /* article */
@@ -16,24 +15,24 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 470px;
-  width: 300px;
+  height: auto;
+  width: 350px;
   background-color: #ecf0f1;
-  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.527);
-  margin: 15px;
+
   transition: 0.25s;
+  overflow: hidden;
 }
 .article-container:hover {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.527);
 }
 .article-img {
-  margin-bottom: 20px;
   position: relative;
-  height: 200px;
+  height: 250px;
   width: auto;
   overflow: hidden;
+  background-color: rgb(212, 212, 212);
 }
 
 .article-img img {
@@ -47,9 +46,55 @@
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+.article-all-content {
+  background-color: white;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.auth-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100px;
+}
+.profile-pic {
+  height: 70px;
+  width: 70px;
+  background-color: rgb(214, 214, 214);
+  border-radius: 50%;
+  border: 5px solid white;
+  transform: translateY(-35%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.profile-pic img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.auth-name {
+  text-align: center;
+  color: gray;
+  font-size: 18px;
+  margin-top: -20px;
+}
+.article-main-content {
+  padding: 5px 5px;
+  text-align: center;
+  height: 200px;
+  overflow: hidden;
+}
 .article-title {
-  margin-left: 10px;
-  text-align: start;
+  text-align: justify;
   display: inline;
   color: rgb(58, 58, 58);
   font-size: 22px;
@@ -60,6 +105,24 @@
   padding: 0 10px;
   text-align: justify;
   font-family: Arial, "Noto Sans";
-
+  font-size: 18px;
   color: rgb(110, 110, 110);
+}
+.read-more {
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+  width: 100%;
+  background-color: rgb(0, 132, 255);
+  text-align: center;
+}
+
+/* see all wrap */
+
+.saa-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: start;
+  justify-content: center;
 }

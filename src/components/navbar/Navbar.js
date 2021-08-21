@@ -13,7 +13,7 @@ export default function TopNavbar() {
       sticky="top"
     >
       <Navbar.Brand>
-        <NavLink href="#home" className="">
+        <NavLink href="/#home" className="">
           <img src={logo} width="50" />{" "}
           <span className="company-name">Astro Guruji</span>
         </NavLink>

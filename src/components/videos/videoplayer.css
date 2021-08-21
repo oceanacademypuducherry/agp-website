@@ -24,6 +24,9 @@
 }
 .vp-video {
   height: 36vw;
+  padding-bottom: 20px;
+  border-bottom: 3px solid rgb(212, 212, 212);
+  margin-bottom: 10px;
 }
 
 /* rc video */
@@ -64,7 +67,9 @@
   width: 100%;
   font-size: 18px;
 }
-
+.video-link:hover {
+  text-decoration: none;
+}
 @media (max-width: 1000px) {
   .video-player {
     display: flex;
@@ -78,4 +83,16 @@
   .rc-video {
     width: 98%;
   }
+}
+
+.player-wrapper {
+  width: auto;
+  height: auto;
+}
+.react-player {
+  position: relative;
+}
+
+.react-player > div {
+  position: absolute;
 }
