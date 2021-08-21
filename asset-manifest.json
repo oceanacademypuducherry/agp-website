@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/agp-website/static/css/main.268a83b5.chunk.css",
-    "main.js": "/agp-website/static/js/main.0df0c891.chunk.js",
-    "main.js.map": "/agp-website/static/js/main.0df0c891.chunk.js.map",
+    "main.js": "/agp-website/static/js/main.10f1d559.chunk.js",
+    "main.js.map": "/agp-website/static/js/main.10f1d559.chunk.js.map",
     "runtime-main.js": "/agp-website/static/js/runtime-main.136f18a4.js",
     "runtime-main.js.map": "/agp-website/static/js/runtime-main.136f18a4.js.map",
     "static/css/2.c0e8d3f0.chunk.css": "/agp-website/static/css/2.c0e8d3f0.chunk.css",
@@ -25,6 +25,6 @@
     "static/css/2.c0e8d3f0.chunk.css",
     "static/js/2.57762c32.chunk.js",
     "static/css/main.268a83b5.chunk.css",
-    "static/js/main.0df0c891.chunk.js"
+    "static/js/main.10f1d559.chunk.js"
   ]
 }
