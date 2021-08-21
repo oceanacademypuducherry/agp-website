@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/agp-website/static/css/main.ea587fed.chunk.css",
-    "main.js": "/agp-website/static/js/main.09a1549f.chunk.js",
-    "main.js.map": "/agp-website/static/js/main.09a1549f.chunk.js.map",
-    "runtime-main.js": "/agp-website/static/js/runtime-main.136f18a4.js",
-    "runtime-main.js.map": "/agp-website/static/js/runtime-main.136f18a4.js.map",
-    "static/css/2.c0e8d3f0.chunk.css": "/agp-website/static/css/2.c0e8d3f0.chunk.css",
-    "static/js/2.91b7d0d2.chunk.js": "/agp-website/static/js/2.91b7d0d2.chunk.js",
-    "static/js/2.91b7d0d2.chunk.js.map": "/agp-website/static/js/2.91b7d0d2.chunk.js.map",
-    "static/js/3.4047523a.chunk.js": "/agp-website/static/js/3.4047523a.chunk.js",
-    "static/js/3.4047523a.chunk.js.map": "/agp-website/static/js/3.4047523a.chunk.js.map",
-    "index.html": "/agp-website/index.html",
-    "static/css/2.c0e8d3f0.chunk.css.map": "/agp-website/static/css/2.c0e8d3f0.chunk.css.map",
-    "static/css/main.ea587fed.chunk.css.map": "/agp-website/static/css/main.ea587fed.chunk.css.map",
-    "static/js/2.91b7d0d2.chunk.js.LICENSE.txt": "/agp-website/static/js/2.91b7d0d2.chunk.js.LICENSE.txt",
-    "static/media/agp_logo.5d023977.svg": "/agp-website/static/media/agp_logo.5d023977.svg",
-    "static/media/article.47a42da6.jpg": "/agp-website/static/media/article.47a42da6.jpg",
-    "static/media/astrology.a5f5f6fe.jpg": "/agp-website/static/media/astrology.a5f5f6fe.jpg",
-    "static/media/book.69201af7.jpg": "/agp-website/static/media/book.69201af7.jpg",
-    "static/media/home.css": "/agp-website/static/media/home-bg.b47455ef.jpg"
+    "main.css": "/static/css/main.87265a35.chunk.css",
+    "main.js": "/static/js/main.86ebff16.chunk.js",
+    "main.js.map": "/static/js/main.86ebff16.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.57c440a5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.57c440a5.js.map",
+    "static/css/2.c0e8d3f0.chunk.css": "/static/css/2.c0e8d3f0.chunk.css",
+    "static/js/2.fb609c89.chunk.js": "/static/js/2.fb609c89.chunk.js",
+    "static/js/2.fb609c89.chunk.js.map": "/static/js/2.fb609c89.chunk.js.map",
+    "static/js/3.4047523a.chunk.js": "/static/js/3.4047523a.chunk.js",
+    "static/js/3.4047523a.chunk.js.map": "/static/js/3.4047523a.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.c0e8d3f0.chunk.css.map": "/static/css/2.c0e8d3f0.chunk.css.map",
+    "static/css/main.87265a35.chunk.css.map": "/static/css/main.87265a35.chunk.css.map",
+    "static/js/2.fb609c89.chunk.js.LICENSE.txt": "/static/js/2.fb609c89.chunk.js.LICENSE.txt",
+    "static/media/agp_logo.5d023977.svg": "/static/media/agp_logo.5d023977.svg",
+    "static/media/article.47a42da6.jpg": "/static/media/article.47a42da6.jpg",
+    "static/media/astrology.a5f5f6fe.jpg": "/static/media/astrology.a5f5f6fe.jpg",
+    "static/media/book.69201af7.jpg": "/static/media/book.69201af7.jpg",
+    "static/media/home.css": "/static/media/home-bg.b47455ef.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.136f18a4.js",
+    "static/js/runtime-main.57c440a5.js",
     "static/css/2.c0e8d3f0.chunk.css",
-    "static/js/2.91b7d0d2.chunk.js",
-    "static/css/main.ea587fed.chunk.css",
-    "static/js/main.09a1549f.chunk.js"
+    "static/js/2.fb609c89.chunk.js",
+    "static/css/main.87265a35.chunk.css",
+    "static/js/main.86ebff16.chunk.js"
   ]
 }
