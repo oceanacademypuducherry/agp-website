@@ -21,12 +21,35 @@ function App() {
         <TopNavbar />
         <Switch>
           <Route exact path={process.env.PUBLIC_URL + "/"} component={Main} />
-          <Route path={"/book-preview/:id"} component={BookPreview} />
-          <Route path="/video-player/:id" component={VideoPlayer} />
-          <Route path="/article-view/:id" component={ArticleView} />
-          <Route path="/article/seeAll" component={SeeAllArticle} />
-          <Route path="/books/seeAll" component={SeeAllBooks} />
-          <Route path="/videos/seeAll" component={SeeAllVideo} />
+          <Route
+            path={process.env.PUBLIC_URL + "/book-preview/:id"}
+            component={BookPreview}
+          />
+          <Route
+            exact
+            path={process.env.PUBLIC_URL + "/video-player/:id"}
+            component={VideoPlayer}
+          />
+          <Route
+            exact
+            path={process.env.PUBLIC_URL + "/article-view/:id"}
+            component={ArticleView}
+          />
+          <Route
+            exact
+            path={process.env.PUBLIC_URL + "/article/seeAll"}
+            component={SeeAllArticle}
+          />
+          <Route
+            exact
+            path={process.env.PUBLIC_URL + "/books/seeAll"}
+            component={SeeAllBooks}
+          />
+          <Route
+            exact
+            path={process.env.PUBLIC_URL + "/videos/seeAll"}
+            component={SeeAllVideo}
+          />
         </Switch>
       </div>
     </Router>
