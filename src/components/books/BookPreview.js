@@ -6,8 +6,24 @@ import "./book_preview.css";
 import { Row, Col } from "react-bootstrap";
 import { FaHeart, FaShare } from "react-icons/fa";
 import firebase from "../../firebase";
+import DocViewer, { DocViewerRenderers } from "react-doc-viewer";
+
+const onError = (e) => {
+  alert(e, "error in file-viewer");
+};
+
 export default function BookPreview() {
   // const selectedBook = useSelector((state) => state.allBooks);
+
+  const docs = [
+    {
+      uri: "https://www.casebook.net/wp-content/uploads/2017/01/government-technology-7715.pdf",
+    },
+    {
+      uri: "https://images.unsplash.com/photo-1627338733668-8b7858a639bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3334&q=80",
+    },
+  ];
+
   let { id } = useParams();
   const [bookData, setBookData] = useState({
     bookTitle: "book name",
@@ -74,6 +90,21 @@ export default function BookPreview() {
             </div>
           </Col>
         </Row>
+        {/* <div className="wordfile">
+          <DocViewer
+            documents={docs}
+            pluginRenderers={DocViewerRenderers}
+            theme={{
+              primary: "purple",
+              text_primary: "orange",
+              secondary: "pink",
+              text_secondary: "green",
+              tertiary: "blue",
+              text_tertiary: "red",
+              disableThemeScrollbar: false,
+            }}
+          />
+        </div> */}
       </div>
     </div>
   );

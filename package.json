@@ -12,8 +12,10 @@
     "ngx-drag-scroll": "^12.0.0-beta.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.1",
+    "react-doc-viewer": "^0.1.5",
     "react-dom": "^17.0.2",
     "react-elastic-carousel": "^0.11.5",
+    "react-google-docs-viewer": "^1.0.1",
     "react-icons": "^4.2.0",
     "react-player": "^2.9.0",
     "react-redux": "^7.2.4",
@@ -23,7 +25,6 @@
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.3.0",
-    "swiper": "^6.8.1",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

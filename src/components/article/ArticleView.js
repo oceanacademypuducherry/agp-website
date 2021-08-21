@@ -4,17 +4,9 @@ import firebase from "../../firebase";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 
-// articleImage: "https://firebasestorage.googleapis.com/v0/b/astrology-7cec1.appspot.com/o/articles%2Fmatches.png?alt=media&token=39035f00-ce3e-45c9-b7a5-71c14d38d999"
-// articleName: "Astro"
-// content: "Lorem Ipsum
-
 export default function ArticleView() {
-  const articleID = useSelector((state) => state.articleId);
+  // const articleID = useSelector((state) => state.articleId);
   let { id } = useParams();
-
-  console.log("KKKKKKKKKKKKKKKKK");
-  console.log(articleID);
-  console.log("KKKKKKKKKKKKKKKKK");
   const [articleData, setArticleData] = useState({
     title: "",
     description: "",
