@@ -22,7 +22,7 @@ function App() {
       <div className="App">
         <TopNavbar />
         <Switch>
-          <Route exact path={"/agp-website"} component={Main} />
+          <Route exact path={"/"} component={Main} />
           <Route
             path={"/agp-website/book-preview/:id"}
             component={BookPreview}
