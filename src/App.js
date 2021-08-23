@@ -16,6 +16,7 @@ import SeeAllVideo from "./components/videos/SeeAllVideo";
 import Doc from "./components/common/Doc";
 
 function App() {
+  console.log(process.env.PUBLIC_URL);
   return (
     <Router>
       <div className="App">
@@ -27,35 +28,23 @@ function App() {
             component={BookPreview}
           />
           <Route
-            exact
             path={"/agp-website/video-player/:id"}
             component={VideoPlayer}
           />
           <Route
-            exact
             path={"/agp-website/doc/:collection/:id/:fieldName"}
             component={Doc}
           />
           <Route
-            exact
             path={"/agp-website/article-view/:id"}
             component={ArticleView}
           />
           <Route
-            exact
             path={"/agp-website/article/seeAll"}
             component={SeeAllArticle}
           />
-          <Route
-            exact
-            path={"/agp-website/books/seeAll"}
-            component={SeeAllBooks}
-          />
-          <Route
-            exact
-            path={"/agp-website/videos/seeAll"}
-            component={SeeAllVideo}
-          />
+          <Route path={"/agp-website/books/seeAll"} component={SeeAllBooks} />
+          <Route path={"/agp-website/videos/seeAll"} component={SeeAllVideo} />
         </Switch>
       </div>
     </Router>
