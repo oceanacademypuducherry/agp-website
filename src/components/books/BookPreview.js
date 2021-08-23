@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { book } from "../images/allImages";
 import "./book_preview.css";
@@ -13,17 +13,6 @@ const onError = (e) => {
 };
 
 export default function BookPreview() {
-  // const selectedBook = useSelector((state) => state.allBooks);
-
-  const docs = [
-    {
-      uri: "https://www.casebook.net/wp-content/uploads/2017/01/government-technology-7715.pdf",
-    },
-    {
-      uri: "https://images.unsplash.com/photo-1627338733668-8b7858a639bf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3334&q=80",
-    },
-  ];
-
   let { id } = useParams();
   const [bookData, setBookData] = useState({
     bookTitle: "book name",
@@ -84,8 +73,17 @@ export default function BookPreview() {
                 </div>
               </div>
               <div className="bp-buttons">
-                <div className="bp-button read">Read Now</div>
-                <div className="bp-button download">Download</div>
+                <Link
+                  to={`/agp-website/doc/books/${id}/link`}
+                  className="to-link"
+                >
+                  <div className="bp-button read">Read Now</div>
+                </Link>
+
+                <a href={bookData.pdfLink} target="_blank" className="to-link">
+                  {" "}
+                  <div className="bp-button download">Download</div>
+                </a>
               </div>
             </div>
           </Col>

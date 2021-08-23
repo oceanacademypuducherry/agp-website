@@ -13,7 +13,7 @@ import ArticleView from "./components/article/ArticleView";
 import SeeAllArticle from "./components/article/SeeAllArticle";
 import SeeAllBooks from "./components/books/SeeAllBooks";
 import SeeAllVideo from "./components/videos/SeeAllVideo";
-import Doc from "./components/images/Doc";
+import Doc from "./components/common/Doc";
 
 function App() {
   return (
@@ -31,7 +31,11 @@ function App() {
             path={"/agp-website/video-player/:id"}
             component={VideoPlayer}
           />
-          {/* <Route exact path={"/agp-website/article-view/:id"} component={Doc} /> */}
+          <Route
+            exact
+            path={"/agp-website/doc/:collection/:id/:fieldName"}
+            component={Doc}
+          />
           <Route
             exact
             path={"/agp-website/article-view/:id"}
