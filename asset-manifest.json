@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/agp-website/static/css/main.268a83b5.chunk.css",
-    "main.js": "/agp-website/static/js/main.5271a1c2.chunk.js",
-    "main.js.map": "/agp-website/static/js/main.5271a1c2.chunk.js.map",
+    "main.css": "/agp-website/static/css/main.d5413eb5.chunk.css",
+    "main.js": "/agp-website/static/js/main.0d4a2d97.chunk.js",
+    "main.js.map": "/agp-website/static/js/main.0d4a2d97.chunk.js.map",
     "runtime-main.js": "/agp-website/static/js/runtime-main.301df3be.js",
     "runtime-main.js.map": "/agp-website/static/js/runtime-main.301df3be.js.map",
     "static/css/2.c0e8d3f0.chunk.css": "/agp-website/static/css/2.c0e8d3f0.chunk.css",
-    "static/js/2.ae37a2ac.chunk.js": "/agp-website/static/js/2.ae37a2ac.chunk.js",
-    "static/js/2.ae37a2ac.chunk.js.map": "/agp-website/static/js/2.ae37a2ac.chunk.js.map",
+    "static/js/2.dd981ada.chunk.js": "/agp-website/static/js/2.dd981ada.chunk.js",
+    "static/js/2.dd981ada.chunk.js.map": "/agp-website/static/js/2.dd981ada.chunk.js.map",
     "static/js/3.ed10355d.chunk.js": "/agp-website/static/js/3.ed10355d.chunk.js",
     "static/js/3.ed10355d.chunk.js.map": "/agp-website/static/js/3.ed10355d.chunk.js.map",
     "index.html": "/agp-website/index.html",
     "static/css/2.c0e8d3f0.chunk.css.map": "/agp-website/static/css/2.c0e8d3f0.chunk.css.map",
-    "static/css/main.268a83b5.chunk.css.map": "/agp-website/static/css/main.268a83b5.chunk.css.map",
-    "static/js/2.ae37a2ac.chunk.js.LICENSE.txt": "/agp-website/static/js/2.ae37a2ac.chunk.js.LICENSE.txt",
+    "static/css/main.d5413eb5.chunk.css.map": "/agp-website/static/css/main.d5413eb5.chunk.css.map",
+    "static/js/2.dd981ada.chunk.js.LICENSE.txt": "/agp-website/static/js/2.dd981ada.chunk.js.LICENSE.txt",
     "static/media/agp_logo.5d023977.svg": "/agp-website/static/media/agp_logo.5d023977.svg",
     "static/media/article.47a42da6.jpg": "/agp-website/static/media/article.47a42da6.jpg",
     "static/media/astrology.a5f5f6fe.jpg": "/agp-website/static/media/astrology.a5f5f6fe.jpg",
@@ -23,8 +23,8 @@
   "entrypoints": [
     "static/js/runtime-main.301df3be.js",
     "static/css/2.c0e8d3f0.chunk.css",
-    "static/js/2.ae37a2ac.chunk.js",
-    "static/css/main.268a83b5.chunk.css",
-    "static/js/main.5271a1c2.chunk.js"
+    "static/js/2.dd981ada.chunk.js",
+    "static/css/main.d5413eb5.chunk.css",
+    "static/js/main.0d4a2d97.chunk.js"
   ]
 }
