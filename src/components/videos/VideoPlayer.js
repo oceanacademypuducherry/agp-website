@@ -31,8 +31,8 @@ export default function VideoPlayer() {
           ...selectedVideo,
           title: video.data().title,
           description: video.data().description,
-          videoLink: video.data().vedioUrl,
-          videoImage: video.data().imageLink,
+          videoLink: video.data().videoUrl,
+          videoImage: video.data().videoImage,
         });
       });
 
@@ -83,7 +83,7 @@ export default function VideoPlayer() {
           <RecomendedVideo
             key={key}
             title={video.title}
-            imageLink={video.imageLink}
+            imageLink={video.videoImage}
             id={video.docId}
           />
         ))}

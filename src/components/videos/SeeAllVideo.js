@@ -32,7 +32,7 @@ export default function SeeAllVideo() {
         {videos.map((video, key) => (
           <Video
             key={key}
-            videoThumbnail={video.imageLink}
+            videoThumbnail={video.videoImage}
             title={video.title}
             id={video.docId}
           />
