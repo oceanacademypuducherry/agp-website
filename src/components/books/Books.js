@@ -17,7 +17,7 @@ export default function Books() {
   const firestore = firebase.firestore();
   const bookFromDb = firestore
     .collection("books")
-    .where("type", "==", "free")
+    .where("bookType", "==", "free")
     .get();
 
   function getBookData() {
@@ -62,7 +62,7 @@ export default function Books() {
         {books.map((book, key) => (
           <Book
             key={key}
-            img={book.bookLink}
+            img={book.image}
             title={book.bookName}
             docId={book.docId}
           />

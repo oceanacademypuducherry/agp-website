@@ -35,6 +35,7 @@ export default function SeeAllArticle() {
             title={item.articleName}
             description={item.content}
             docId={item.docId}
+            postId={item.postId}
           />
         ))}
       </div>

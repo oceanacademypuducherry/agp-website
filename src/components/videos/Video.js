@@ -9,7 +9,9 @@ export default function Video({ videoThumbnail, title, id }) {
           <img src={videoThumbnail} alt="" />
           <div className="thum-overlay"></div>
         </div>
-        <div className="video-title">{title}</div>
+        <div className="video-title">
+          {title.length > 70 ? `${title.slice(0, 70)}...` : title}
+        </div>
       </div>
     </Link>
   );

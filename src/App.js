@@ -14,6 +14,9 @@ import SeeAllArticle from "./components/article/SeeAllArticle";
 import SeeAllBooks from "./components/books/SeeAllBooks";
 import SeeAllVideo from "./components/videos/SeeAllVideo";
 import Doc from "./components/common/Doc";
+import AdminPage from "./components/admin/admin";
+import ReadQuery from "./components/querys/ReadQuery";
+import Footer from "./components/footer/Footer";
 
 function App() {
   console.log(process.env.PUBLIC_URL);
@@ -36,16 +39,22 @@ function App() {
             component={Doc}
           />
           <Route
-            path={"/agp-website/article-view/:id"}
+            path={"/agp-website/article-view/:id/:postId"}
             component={ArticleView}
           />
           <Route
             path={"/agp-website/article/seeAll"}
             component={SeeAllArticle}
           />
+          <Route
+            path={"/agp-website/query/read-query/:queryId/:postId"}
+            component={ReadQuery}
+          />
           <Route path={"/agp-website/books/seeAll"} component={SeeAllBooks} />
           <Route path={"/agp-website/videos/seeAll"} component={SeeAllVideo} />
+          <Route path={"/agp-website/admin-page/"} component={AdminPage} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

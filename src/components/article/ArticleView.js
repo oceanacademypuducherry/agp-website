@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "./articleView.css";
 import firebase from "../../firebase";
-import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-
+import ReactHtmlParser from "react-html-parser";
+import axios from "axios";
 export default function ArticleView() {
+  const landPost = "<h1>Loading... post</h1>";
+
+  const startingElement = ReactHtmlParser(landPost);
+  const [postElement, setPostElement] = useState(startingElement);
+  const [postElementTitle, setPostElementTitle] = useState(startingElement);
   // const articleID = useSelector((state) => state.articleId);
-  let { id } = useParams();
+  let { id, postId } = useParams();
   const [articleData, setArticleData] = useState({
     title: "",
     description: "",
     image: "",
+    postId: postId,
     error: "",
   });
   function getArticleData() {
@@ -25,6 +31,7 @@ export default function ArticleView() {
           title: respons.data().articleName,
           description: respons.data().content,
           image: respons.data().articleImage,
+          postId: respons.data().postId,
         });
       })
       .catch((error) => {
@@ -35,8 +42,24 @@ export default function ArticleView() {
         alert("somthing went wrong pleas try again later");
       });
   }
+  function getPostData() {
+    axios
+      .get(
+        `https://www.googleapis.com/blogger/v3/blogs/1887870844984411174/posts/${postId}?key=AIzaSyCQ9jLjt8Ekd1Eq08LXHnycX8deR-heco0`
+      )
+      .then((respons) => {
+        console.log(respons.status);
+        console.log(respons.data.content);
+        setPostElement(ReactHtmlParser(respons.data.content));
+        setPostElementTitle(ReactHtmlParser(respons.data.title));
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  }
   useEffect(() => {
     getArticleData();
+    getPostData();
   }, []);
 
   console.log(articleData);
@@ -44,10 +67,10 @@ export default function ArticleView() {
   return (
     <div>
       <div className="av-article-img-div">
-        <img src={articleData.image} alt="article image" />
-        <div className="av-article-title">{articleData.title}</div>
+        {/* <img src={articleData.image} alt="article image" /> */}
+        <div className="av-article-title">{postElementTitle}</div>
       </div>
-      <div className="av-article-content">{articleData.description}</div>
+      <div className="av-article-content">{postElement}</div>
     </div>
   );
 }

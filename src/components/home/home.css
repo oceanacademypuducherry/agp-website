@@ -1,30 +1,51 @@
+@font-face {
+  font-family: "Questrial";
+  src: url("../fonts/Questrial-Regular.ttf");
+}
+.home-container {
+  height: 50vh;
+  width: 100%;
+  background-color: black;
+}
 .bg-img {
+  background-color: rgb(0, 0, 0);
+  height: 100%;
+  width: 100%;
   position: relative;
-  height: 100vh;
-  width: 100%;
-  background-image: url("../images/home-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center right;
 }
-.overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.bg-img img {
   position: absolute;
-  height: 100vh;
+  left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.568);
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
 }
-.home-text {
-  font-size: 35px;
-
-  color: white;
-  text-align: center;
-}
-.button {
-  margin: 50px;
-  font-size: 20px;
+.bg-img .title {
+  font-family: "Questrial", sans-serif !important;
+  font-size: 40px;
   font-weight: bold;
+  color: white;
+  letter-spacing: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 500px) {
+  .bg-img .title {
+    font-size: 25px;
+  }
+  .home-container {
+    height: 20vh;
+    width: 100%;
+    background-color: black;
+  }
+}
+@media (max-width: 800px) {
+  .home-container {
+    height: 30vh;
+    width: 100%;
+    background-color: black;
+  }
 }

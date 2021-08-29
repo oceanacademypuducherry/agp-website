@@ -1,6 +1,6 @@
 .av-article-img-div {
-  width: 100vw;
-  height: 400px;
+  width: 100%;
+  height: auto;
   background-color: rgb(243, 243, 243);
   overflow: hidden;
   align-items: center;

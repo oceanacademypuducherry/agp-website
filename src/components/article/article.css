@@ -82,6 +82,7 @@
 }
 
 .auth-name {
+  width: 300px;
   text-align: center;
   color: gray;
   font-size: 18px;
@@ -94,10 +95,10 @@
   overflow: hidden;
 }
 .article-title {
-  text-align: justify;
+  text-align: start !important;
   display: inline;
   color: rgb(58, 58, 58);
-  font-size: 22px;
+  font-size: 20px;
   font-family: -apple-system, BlinkMacSystemFont, Arial, "Noto Sans";
   font-weight: bold;
 }

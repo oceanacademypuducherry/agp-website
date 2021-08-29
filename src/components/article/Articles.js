@@ -62,6 +62,7 @@ export default function Articles() {
             title={item.articleName}
             description={item.content}
             docId={item.docId}
+            articleId={item.postId}
           />
         ))}
       </Carousel>

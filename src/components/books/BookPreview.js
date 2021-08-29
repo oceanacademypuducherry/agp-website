@@ -31,9 +31,9 @@ export default function BookPreview() {
         setBookData({
           ...bookData,
           bookTitle: data.data().bookName,
-          bookImg: data.data().bookLink,
+          bookImg: data.data().image,
           description: data.data().description,
-          pdfLink: data.data().link,
+          pdfLink: data.data().pdfLink,
         });
       })
       .catch((error) => {
@@ -74,7 +74,7 @@ export default function BookPreview() {
               </div>
               <div className="bp-buttons">
                 <Link
-                  to={`/agp-website/doc/books/${id}/link`}
+                  to={`/agp-website/doc/books/${id}/pdfLink`}
                   className="to-link"
                 >
                   <div className="bp-button read">Read Now</div>

@@ -1,0 +1,62 @@
+.query-read {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.main-query {
+  /* padding: 50px; */
+}
+.queryImage {
+  height: 50vh;
+  width: 100%;
+  background-color: yellow;
+  overflow: hidden;
+}
+.queryImage img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.postDb-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+.postDb-content {
+  padding: 5px;
+}
+.querys {
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.383);
+}
+.rq-q-image {
+  min-width: 160px;
+  max-width: 100px;
+  height: 100px;
+  width: 160px;
+  padding: 5px;
+  display: inline-block;
+}
+.rq-q-image img {
+  object-fit: cover;
+}
+.rq-q-title {
+  /* width: 50%; */
+  display: inline-block;
+}
+.list-of-query {
+  background-color: rgb(243, 243, 243) !important;
+}
+
+@media (max-width: 500px) {
+  .rq-q-image {
+    min-width: 130px;
+    max-width: 70px;
+    height: 70px;
+    width: 130px;
+    padding: 3px;
+    display: inline-block;
+  }
+}
