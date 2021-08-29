@@ -7,8 +7,7 @@ export default function AdminPage() {
 
   React.useEffect(() => {
     if (confirmDialog()) {
-      window.location =
-        "https://stackoverflow.com/questions/42914666/react-router-external-link";
+      window.location = "https://makarajothiadmin-a07c8.web.app/";
     } else {
       window.location = "/#home";
     }

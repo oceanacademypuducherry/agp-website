@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "astrology-7cec1"
+  },
+  "targets": {
+    "astrology-7cec1": {
+      "hosting": {
+        "public": [
+          "astrology-7cec1"
+        ]
+      }
+    }
   }
 }

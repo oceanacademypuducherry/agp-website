@@ -52,7 +52,7 @@ function App() {
           />
           <Route path={"/agp-website/books/seeAll"} component={SeeAllBooks} />
           <Route path={"/agp-website/videos/seeAll"} component={SeeAllVideo} />
-          <Route path={"/agp-website/admin-page/"} component={AdminPage} />
+          <Route exact path={"/admin-page"} component={AdminPage} />
         </Switch>
         <Footer />
       </div>
