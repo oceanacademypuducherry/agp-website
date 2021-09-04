@@ -48,46 +48,43 @@ export default function BookPreview() {
   return (
     <div className="book-preview">
       <div className="book-preview-row">
-        <Row>
-          <Col lg={5} className="bp-col bp-i">
-            <div className="book-image">
-              <img src={`${bookData.bookImg}`} className="img" />
-            </div>
-          </Col>
+        <div className="book-image">
+          <img src={`${bookData.bookImg}`} className="img" />
+        </div>
 
-          <Col lg={7} className="bp-col bp-c">
-            <div className="book-preview-content-col">
-              <div className="bp-title">{`${bookData.bookTitle}`}</div>
-              <div className="bp-content">
-                {`${bookData.description.slice(0, 500)}... `}
-                <span className="bp-read-more">Read more</span>
+        <div className="book-preview-content-col">
+          <div className="div">
+            <div className="bp-title">{`${bookData.bookTitle}`}</div>
+            <div className="bp-content">
+              {`${bookData.description.slice(0, 500)}... `}
+              <span className="bp-read-more">Read more</span>
+            </div>
+          </div>
+          {/* <div className="bp-icons">
+            <div className="bp-like">
+              <div className="bp-fav">
+                <FaHeart className="heart-color" /> <span>25</span>
               </div>
-              <div className="bp-icons">
-                <div className="bp-like">
-                  <div className="bp-fav">
-                    <FaHeart className="heart-color" /> <span>25</span>
-                  </div>
-                  <div className="bp-share">
-                    <FaShare className="share-color" />
-                  </div>
-                </div>
+              <div className="bp-share">
+                <FaShare className="share-color" />
               </div>
-              <div className="bp-buttons">
-                <Link
+            </div>
+          </div> */}
+          <div className="bp-buttons">
+            {/* <Link
                   to={`/agp-website/doc/books/${id}/pdfLink`}
                   className="to-link"
                 >
                   <div className="bp-button read">Read Now</div>
-                </Link>
+                </Link> */}
 
-                <a href={bookData.pdfLink} target="_blank" className="to-link">
-                  {" "}
-                  <div className="bp-button download">Download</div>
-                </a>
-              </div>
-            </div>
-          </Col>
-        </Row>
+            <a href={bookData.pdfLink} target="_blank" className="to-link">
+              {" "}
+              <div className="bp-button download">Read Now</div>
+            </a>
+          </div>
+        </div>
+
         {/* <div className="wordfile">
           <DocViewer
             documents={docs}

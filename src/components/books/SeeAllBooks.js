@@ -8,7 +8,7 @@ export default function SeeAllBooks() {
   const firestore = firebase.firestore();
   const bookFromDb = firestore
     .collection("books")
-    .where("type", "==", "free")
+    .where("bookType", "==", "free")
     .get();
 
   function getBookData() {

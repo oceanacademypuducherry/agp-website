@@ -27,7 +27,7 @@ export default function Article({
                   alt=""
                 />
               </div>
-              <div className="auth-name">Author Name</div>
+              <div className="auth-name">S Arichandran</div>
             </div>
 
             <div className="article-main-content">
