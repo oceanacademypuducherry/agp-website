@@ -43,7 +43,7 @@ export default function Books() {
     { width: 1500, itemsToShow: 5 },
     { width: 1800, itemsToShow: 6 },
   ];
-  console.log(books);
+
   return (
     <div id="books" className="books-div">
       <SectionTitle title="Free Books" />

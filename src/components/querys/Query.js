@@ -34,9 +34,12 @@ export default function Query({
           <hr />
           <div className="author">
             <div className="author-img">
-              <img src={authorImg} alt="" />
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/ocean-live-project-ea2e7.appspot.com/o/auth.jpg?alt=media&token=566d6c80-fcf7-4ac6-bcf4-0e3977c00add"
+                alt=""
+              />
             </div>
-            <div className="author-name">Author name</div>
+            <div className="author-name">S. Arichandran</div>
           </div>
         </div>
       </div>
