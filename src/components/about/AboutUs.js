@@ -9,23 +9,26 @@ export default function AboutUs() {
       <SectionTitle title="About Us" />
       <div className="about-us-all-content">
         <p className="about-us-content">
-          Since 2014, Springnet Technology is one of the prominent IT firm of
-          Indian provenance which intent to relinquish unique work ethics to
-          clients over a coalition of merit, elegant frameworks and resource
-          conveyance modernization based in Pondicherry. Springnet Technology is
-          a team of developers and designers devoted to our commitments,
-          providing results, and striving for the highest quality.
+          ஜோதிடம் என்பது அறிவியல் ஆராய்ச்சியில் உட்பட்ட மருத்துவம் என்று
+          கூறலாம். மருத்துவ ஜோதிடம் என்பது இன்றைய காலகட்டத்தில் அனைவருக்கும்
+          தெரிந்திருக்கும். ஆனாலும் இந்த கட்டுரையின் வாயிலாக முதலில் மருத்துவ
+          ஜோதிடம் பற்றிய சிறு விளக்கம், லக்கின மற்றும் ராசியின் முக்கிய உடற்
+          பாகங்கள், கிரகங்கள் வாயிலான நோய்களின் பாதிப்புகள், இந்த கலியுகத்தில்
+          நோய்க்கான சிறு தீர்வு என்று பார்ப்போம்.
         </p>
 
         <p className="about-us-content">
-          We work to unite a group of innovation, business, and social idealist.
-          Our goal is to foster a habitat of Honesty and Integrity towards our
-          customers, workers, merchants and society unbound. We focus on our
-          clients, accomplices and have a crucifixion for innovation. We take on
-          enormous difficulties, and highly esteem owning them. We are working
-          to turn our passion into booming innovation. We also provide a
-          complete scope of amenities by leveraging our domain and business
-          expertise with leading technology providers.
+          ஒரு மனிதனுக்கு நோய் என்பது இருவகையாகப் பிரிக்கலாம். ஒரு வகை மனிதனுக்கு
+          எப்பொழுதும் நோய் இருந்துகொண்டு இருக்கும் அவை ஜாதகரின் விதி, ஆனால்
+          இந்தவகை தாக்கத்தை இயற்கை மருத்துவப்படி சிறிது குறைத்துக் கொள்ளலாம்.
+          மற்றொருவகை ஒருசில காலகட்டங்களில் நோய்கள் வந்துவிட்டுச் செல்லும். அந்த
+          நோயின் தீவிரத்தை ஜாதகரின் 6, 8 அதிபதிகள் மற்றும் நட்சத்திர சாரம் பெற்ற
+          அதிபதிகள் தீர்மானிப்பார்கள். சில நாட்களிலே மருந்து உண்டு
+          குணப்படுத்தக்கூடிய நோய்கள் ஆறாம் வீட்டையும் மற்றும் ஜாதகரின் வாழ்நாள்
+          முழுவதும் மருந்து உட்கொள்ளும் நோய்கள் எட்டாம் வீட்டையும், படுக்கையில்
+          படுத்தே கிடப்பார்கள் என்பதற்கு பனிரெண்டு பாவத்தையும் குறிக்கும். அந்த
+          காலங்களில் நாம் கொஞ்சம் கவனம் மற்றும் முன்னோர் கோட்பாடுகளின்படி நோயின்
+          தாக்கத்தைக் குறைத்துக் கொள்ளலாம்.
         </p>
       </div>
     </div>
