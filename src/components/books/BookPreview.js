@@ -42,7 +42,6 @@ export default function BookPreview() {
   }
 
   useEffect(() => {
-    // console.log(selectedBook.books[0].bookName);
     getBookData();
   }, []);
   return (

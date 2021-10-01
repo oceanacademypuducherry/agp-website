@@ -19,7 +19,6 @@ import ReadQuery from "./components/querys/ReadQuery";
 import Footer from "./components/footer/Footer";
 
 function App() {
-  console.log(process.env.PUBLIC_URL);
   return (
     <Router>
       <div className="App">

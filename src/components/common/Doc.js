@@ -10,7 +10,6 @@ export default function Doc() {
   const bookFromDb = firestore.collection(collection).doc(id).get();
   function getBookData() {
     bookFromDb.then((response) => {
-      console.log(response.data());
       setBookURL(response.data()[fieldName]);
     });
   }

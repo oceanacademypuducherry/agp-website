@@ -27,8 +27,6 @@ export default function ReadQuery() {
         `https://www.googleapis.com/blogger/v3/blogs/1887870844984411174/posts/${postId}?key=AIzaSyCQ9jLjt8Ekd1Eq08LXHnycX8deR-heco0`
       )
       .then((respons) => {
-        console.log(respons.status);
-        console.log(respons.data.content);
         setPostElement(ReactHtmlParser(respons.data.content));
         setPostElementTitle(ReactHtmlParser(respons.data.title));
       })

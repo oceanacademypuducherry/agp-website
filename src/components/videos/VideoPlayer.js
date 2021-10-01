@@ -25,8 +25,6 @@ export default function VideoPlayer() {
       .doc(id)
       .get()
       .then((video) => {
-        console.log("=================");
-        console.log(video.data());
         setSelectedVideo({
           ...selectedVideo,
           title: video.data().title,

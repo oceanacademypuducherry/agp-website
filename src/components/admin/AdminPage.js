@@ -3,7 +3,6 @@ import React from "react";
 export default function AdminPage() {
   function confirmDialog(event) {
     confirm("Press a button!");
-    console.log(username);
   }
 
   React.useEffect(() => {

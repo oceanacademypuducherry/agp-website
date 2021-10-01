@@ -11,7 +11,6 @@ export default function RecommendedQuery() {
     fireData.onSnapshot((querySnapshot) => {
       let queryResponse = [];
       querySnapshot.docs.map((doc) => {
-        console.log(doc.data());
         let dbField = doc.data();
         dbField["docId"] = doc.id;
         queryResponse.push(dbField);
