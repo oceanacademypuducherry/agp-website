@@ -18,8 +18,8 @@ export default function Video({ videoThumbnail, title, id }) {
           </div>
           <img src={videoThumbnail} alt="" />
         </div>
-        <div className="video-title">
-          {title.length > 70 ? `${title.slice(0, 70)}...` : title}
+        <div style={{ width: "100%", height: 80 }}>
+          <p className="video-title">{title}</p>
         </div>
       </div>
     </Link>

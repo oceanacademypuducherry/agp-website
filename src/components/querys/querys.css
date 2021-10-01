@@ -44,10 +44,7 @@
   font-size: 22px;
   font-weight: bold;
   height: 100px;
-
-  display: flex;
-  justify-self: center;
-  align-items: center;
+  text-overflow: ellipsis;
 }
 hr {
   padding: 0;
@@ -57,9 +54,6 @@ hr {
   font-size: 18px;
   color: #6e6e6e;
   height: 100px;
-  display: flex;
-  justify-self: center;
-  align-items: center;
 }
 .author {
   display: flex;
@@ -86,4 +80,17 @@ hr {
   color: rgb(87, 87, 87);
   font-size: 25px;
   font-family: "Tenali Ramakrishna", sans-serif;
+}
+@media (max-width: 500px) {
+  .query-container {
+    width: 99%;
+  }
+  .question {
+    font-size: 18px;
+    height: 80px;
+  }
+  .answer {
+    font-size: 10px;
+    height: 80px;
+  }
 }

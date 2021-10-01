@@ -127,3 +127,8 @@
   text-align: start;
   justify-content: center;
 }
+@media (max-width: 410px) {
+  .article-container {
+    width: 99%;
+  }
+}
