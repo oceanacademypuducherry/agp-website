@@ -1,8 +1,6 @@
 import React from "react";
 import "./footer.css";
-import YouTubeIcon from "@material-ui/icons/YouTube";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import InstagramIcon from "@material-ui/icons/Instagram";
+import { logoWhite } from "../images/allImages";
 import { Link } from "react-router-dom";
 import apple from "./appleStore.png";
 import play from "./googlePlay.png";
@@ -13,25 +11,30 @@ export default function Footer() {
     <div className="footer">
       <div className="copy-right-content">
         <Row>
-          <Col md={4} className="text-light">
+          <Col md={3} className="text-center">
+            <img src={logoWhite} alt="" height="150" />
+          </Col>
+          <Col md={3} className="text-light">
             <h4>Contact Us</h4>
             <div className="contact-info">
               <div className="fc-name fcinfo">Makarajothi Astro Labs</div>
               <div className="fc-address fcinfo">
-                No.10, Second Floor, 45 Feet Rd, near HDFC Bank, Venkateshwara
-                Nagar, Saram, Puducherry 605013
+                Coimbatore, Tamilnadu
+                {/* No.10, Second Floor, 45 Feet Rd, near HDFC Bank, Venkateshwara
+                Nagar, Saram, Puducherry 605013 */}
               </div>
-              <div className="fc-number fcinfo">0413 123456</div>
+              <div className="fc-number fcinfo">+91 9842855294</div>
             </div>
           </Col>
           <Col
-            md={4}
+            md={3}
             className="text-light"
-            style={{ justifyContent: "center" }}
+            style={{ justifyContent: "center", alignItems: "center" }}
           >
             <h4>Navigation</h4>
-            <Row>
-              <Col md={4}>
+
+            <Row style={{ textAlign: "center" }}>
+              <Col>
                 <Nav.Link href="/#home" className="bottom-nav text-light">
                   Home
                 </Nav.Link>
@@ -42,7 +45,7 @@ export default function Footer() {
                   Books
                 </Nav.Link>
               </Col>
-              <Col md={4}>
+              <Col>
                 <Nav.Link href="/#videos" className="bottom-nav text-light">
                   Videos
                 </Nav.Link>
@@ -55,7 +58,7 @@ export default function Footer() {
               </Col>
             </Row>
           </Col>
-          <Col md={4} className="text-light">
+          <Col md={3} className="text-light">
             <h4>Download our App</h4>
             <Link
               onClick={() => {

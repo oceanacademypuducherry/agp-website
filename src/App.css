@@ -26,6 +26,13 @@ html {
   font-size: calc(10px + 2vmin);
   color: white;
 }
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
 
 .App-link {
   color: #61dafb;
@@ -56,4 +63,11 @@ html {
 .see-all-text:hover {
   background-color: rgba(185, 185, 185, 0.322);
   color: rgb(3, 124, 223);
+}
+.to-link {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }

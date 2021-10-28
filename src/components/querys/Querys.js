@@ -64,18 +64,7 @@ export default function Querys() {
         ) : (
           <h1>No data</h1>
         )}
-
-        {/* <Query authorImg={item.queryImage} /> */}
-        {/* <Query authorImg={author} /> */}
-        {/* <Query authorImg={author} />
-        <Query authorImg={author} />
-        <Query authorImg={author} />
-        <Query authorImg={author} />
-        <Query authorImg={author} />
-        <Query authorImg={author} />
-        <Query authorImg={author} /> */}
       </Carousel>
-      {/* </div> */}
     </div>
   );
 }

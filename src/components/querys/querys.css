@@ -53,7 +53,7 @@ hr {
 .answer {
   font-size: 18px;
   color: #6e6e6e;
-  height: 100px;
+  text-align: justify;
 }
 .author {
   display: flex;

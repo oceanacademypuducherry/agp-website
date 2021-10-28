@@ -57,7 +57,7 @@
 }
 .bp-title {
   width: 60vw;
-  font-size: 2vw;
+  font-size: 25px;
   font-weight: bold;
   text-align: left;
 }
@@ -109,13 +109,13 @@
   cursor: pointer;
   background-color: rgb(4, 163, 4);
   color: white;
-  padding: 1vw 1.5vw;
+  padding: 10px;
   border-radius: 5px;
-  font-size: 1.5vw;
+  font-size: 22px;
   font-weight: bold;
   transition: 0.5s;
   margin: 20px;
-  width: 15vw;
+  width: 150px;
 }
 .bp-button:hover {
   background-color: rgb(2, 102, 2);
@@ -162,16 +162,16 @@
   }
   .bp-content {
     width: 90vw;
-    font-size: 4vw;
+    font-size: 20px;
   }
   .bp-title {
     width: 90vw;
-    font-size: 6vw;
+    font-size: 25px;
   }
   .bp-button {
     padding: 1vw 1.5vw;
     border-radius: 5px;
-    font-size: 3vw;
+    font-size: 20;
     font-weight: bold;
     transition: 0.5s;
     margin: 20px;
