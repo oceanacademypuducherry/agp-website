@@ -55,7 +55,7 @@ export default function BookPreview() {
           <div className="div">
             <div className="bp-title">{`${bookData.bookTitle}`}</div>
             <div className="bp-content">
-              {`${bookData.description.slice(0, 500)}... `}
+              {`${bookData.description}... `}
               <span className="bp-read-more">Read more</span>
             </div>
           </div>

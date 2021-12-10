@@ -45,7 +45,7 @@ export default function ArticleView() {
   function getPostData() {
     axios
       .get(
-        `https://www.googleapis.com/blogger/v3/blogs/1887870844984411174/posts/${postId}?key=AIzaSyCQ9jLjt8Ekd1Eq08LXHnycX8deR-heco0`
+        `https://www.googleapis.com/blogger/v3/blogs/9140876532055589480/posts/${postId}?key=AIzaSyCQ9jLjt8Ekd1Eq08LXHnycX8deR-heco0`
       )
       .then((respons) => {
         setPostElement(ReactHtmlParser(respons.data.content));

@@ -8,7 +8,7 @@ export default function Book({ img, title, docId }) {
         <div className="book">
           <img src={img} />
         </div>
-        <div className="book-title">{title.slice(0, 20)}...</div>
+        <div className="book-title">{title}</div>
         {/* <div className="book-preview-button btn-fluid btn-success">Preview</div> */}
       </div>
     </Link>

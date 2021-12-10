@@ -31,9 +31,14 @@ export default function Article({
             </div>
 
             <div className="article-main-content">
-              <div className="article-title">{title.slice(0, 55)}...</div>
+              <div
+                className="article-title"
+                style={{ textOverflow: "ellipsis" }}
+              >
+                {title}
+              </div>
               <div className="article-subtitle">
-                {description.slice(0, 75)}...
+                {/* {description.slice(0, 75)}... */}
               </div>
             </div>
             <div className="read-more">Read more</div>

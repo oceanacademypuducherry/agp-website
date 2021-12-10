@@ -89,12 +89,15 @@
   margin-top: -20px;
 }
 .article-main-content {
+  height: 153px;
   padding: 5px 5px;
   text-align: center;
-  height: 200px;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
+
 .article-title {
+  text-overflow: ellipsis;
   text-align: start !important;
   display: inline;
   color: rgb(58, 58, 58);

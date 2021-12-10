@@ -11,7 +11,7 @@ export default function QueryList({ queryId, title, image, postId }) {
         <div className="rq-q-image">
           <img className="img" src={image} height="100%" width="100%" />
         </div>
-        <div className="rq-q-title">{title.slice(0, 97)}...</div>
+        <div className="rq-q-title">{title}...</div>
       </div>
     </Link>
   );
